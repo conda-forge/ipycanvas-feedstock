@@ -19,6 +19,7 @@ requirements:
     - python >=3.6
     - pip
     - jupyter-packaging =0.7
+    - jupyterlab =3
   run:
     - ipywidgets >=7.6.0
     - numpy
