@@ -1,5 +1,5 @@
 {% set name = "ipycanvas" %}
-{% set version = "0.12.0" %}
+{% set version = "0.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3984339cef0c15674e347dd65ffb0cd1edc62e37869cbb5efea46f3259e976f3
+  sha256: 487390b8b8bbd29c520dde1d46da59c530e816dcfa3fab659272d7eb08d76c61
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - jupyter-packaging =0.7
     - jupyterlab =3
   run:
-    - ipywidgets >=7.6.0
+    - ipywidgets >=7.6.0,<9
     - numpy
     - pillow >=6.0
     - python >=3.6
