@@ -1,5 +1,5 @@
 {% set name = "ipycanvas" %}
-{% set version = "0.12.1" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 487390b8b8bbd29c520dde1d46da59c530e816dcfa3fab659272d7eb08d76c61
+  sha256: 7e66bd2e4be956ea1ffedde3f56c8557d60583165493ae511a1dc86f496d7354
 
 build:
   noarch: python
