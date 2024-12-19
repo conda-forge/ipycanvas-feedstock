@@ -6,17 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4e867c509b01f5c4cfc009f7d921e32e5a12a029ac856e78c04ff15b65692c4a
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - yarn
     - jupyterlab =4
@@ -26,9 +26,11 @@ requirements:
     - ipywidgets >=7.6.0,<9
     - numpy
     - pillow >=6.0
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ipycanvas
   commands:
