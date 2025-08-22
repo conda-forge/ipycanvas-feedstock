@@ -3,15 +3,13 @@ About ipycanvas-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipycanvas-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/martinRenou/ipycanvas
+Home: https://github.com/jupyter-widgets-contrib/ipycanvas
 
 Package license: BSD-3-Clause
 
 Summary: Interactive widgets library exposing the browser's Canvas API
 
-Development: http://github.com/martinRenou/ipycanvas
-
-Documentation: https://ipycanvas.readthedocs.io
+Documentation: https://ipycanvas.readthedocs.io/
 
 Current build status
 ====================
@@ -147,5 +145,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@martinRenou](https://github.com/martinRenou/)
 

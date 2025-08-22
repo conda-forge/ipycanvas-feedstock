@@ -23,13 +23,13 @@ build:
 
 requirements:
   host:
-    - hatch-jupyter-builder >=0.8.3
-    - hatch-nodejs-version >=0.3.2
+    - hatch-jupyter-builder >=0.8.1
     - hatchling
     - jupyterlab ${{ jupyterlab_host_version }}.*
     - nodejs 24.*
     - pip
     - python ${{ python_min }}.*
+    - yarn
   run:
     - ipywidgets >=7.6.0,<9
     - numpy
@@ -60,8 +60,8 @@ tests:
 about:
   license: BSD-3-Clause
   license_file:
-    - LICENSE
-    - ipycavnas/labextension/static/third-party-licenses.json
+    - LICENSE.txt
+    - ipycanvas/labextension/static/third-party-licenses.json
   summary: Interactive widgets library exposing the browser's Canvas API
   homepage: https://github.com/jupyter-widgets-contrib/ipycanvas
   documentation: https://ipycanvas.readthedocs.io
