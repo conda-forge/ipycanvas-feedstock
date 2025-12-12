@@ -27,6 +27,7 @@ requirements:
   host:
     - hatch
     - hatch-build-scripts
+    - hatch-jupyter-builder >=0.8.1
     - hatch-nodejs-version
     - hatchling
     - jupyterlab ${{ jupyterlab_host_version }}.*
