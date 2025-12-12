@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.14.2"
+  version: "0.14.3"
   # build against the oldest available 4.0.x to avoid spurious `etc/jupyter/labconfig/page_config.json`
   jupyterlab_host_version: "4.0"
   # test against the latest supported version
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/i/ipycanvas/ipycanvas-${{ version }}.tar.gz
-  sha256: 38537044771194dda31636c4107878471672a7acb584b7e8b5182b229b1706d5
+  sha256: c6a53a22eebf4d611b168b8f4434145883f27a7575509bd99a4bfc48c5385a39
 
 build:
   number: 0
