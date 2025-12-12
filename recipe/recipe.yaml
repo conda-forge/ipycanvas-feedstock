@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
   version: "0.14.3"
+  python_check_max: "3.14"
   # build against the oldest available 4.0.x to avoid spurious `etc/jupyter/labconfig/page_config.json`
   jupyterlab_host_version: "4.0"
   # test against the latest supported version
@@ -23,7 +25,9 @@ build:
 
 requirements:
   host:
-    - hatch-jupyter-builder >=0.8.1
+    - hatch
+    - hatch-build-scripts
+    - hatch-nodejs-version
     - hatchling
     - jupyterlab ${{ jupyterlab_host_version }}.*
     - nodejs 24.*
@@ -42,7 +46,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - ${{ python_check_max }}.*
   - package_contents:
       files:
         - share/jupyter/nbextensions/ipycanvas/extension.js
