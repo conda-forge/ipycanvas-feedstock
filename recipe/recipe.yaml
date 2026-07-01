@@ -18,7 +18,7 @@ source:
   sha256: c6a53a22eebf4d611b168b8f4434145883f27a7575509bd99a4bfc48c5385a39
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
@@ -38,6 +38,7 @@ requirements:
   run:
     - ipywidgets >=7.6.0,<9
     - numpy
+    - orjson
     - pillow >=6.0
     - python >=${{ python_min }}
 
